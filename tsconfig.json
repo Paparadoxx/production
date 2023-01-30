@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "noImplicitAny": true,
+		//подсвечивает все места, где не указан тип
+    "module": "ESNext",
+    "target": "es5",
+    "jsx": "react",
+    "allowJs": true,
+    "moduleResolution": "node",
+		"esModuleInterop": true,
+		//esModuleInterop позволяет работать с пакетами, которые используют 
+		//common js как с обычными пакетами с пом. import (require() mdule.export =common js)
+		"allowSyntheticDefaultImports": true,
+		//усли библиотека не имеет default export
+		//лоадеры(ts-loader, babel-loader) фвтоматически создают их 
+		//вместо такого импорта
+		//import * as React from'react' -> import React from 'react'
+  },
+	"ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  }
+}
