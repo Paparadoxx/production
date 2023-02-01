@@ -5,15 +5,15 @@
 		//подсвечивает все места, где не указан тип
     "module": "ESNext",
     "target": "es5",
-    "jsx": "react",
+    "jsx": "react-jsx",
     "allowJs": true,
     "moduleResolution": "node",
-    "baseUrl":".",
+    "baseUrl": ".",
 		"esModuleInterop": true,
 		//esModuleInterop позволяет работать с пакетами, которые используют 
 		//common js как с обычными пакетами с пом. import (require() mdule.export =common js)
-		"allowSyntheticDefaultImports": true,
-		//усли библиотека не имеет default export
+		"allowSyntheticDefaultImports": true
+		//если библиотека не имеет default export
 		//лоадеры(ts-loader, babel-loader) фвтоматически создают их 
 		//вместо такого импорта
 		//import * as React from'react' -> import React from 'react'
