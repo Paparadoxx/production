@@ -1,27 +1,18 @@
-import { Suspense } from "react";
-import { Link, Route, Routes } from "react-router-dom";
 import './styles/index.scss';
-
-import { useTheme } from "./providers/ThemeProvider/lib/useTheme";
-import { classNames } from "../shared/lib/classnames/classNames";
-import { AboutPage } from "pages/AboutPage";
-import { MainPage } from "pages/MainPage";
+import { classNames } from "shared/lib/classnames/classNames";
+import { AppRouter } from "./providers/router";
+import { Navbar } from "widgets/Navbar";
+import { useTheme } from './providers/ThemeProvider';
 
 const App = () => {
-	const {theme, toggleTheme} = useTheme();
+	const {theme} = useTheme();
+
 	return (
 		<div className={classNames('app', {}, [theme])}>
-			<button onClick={toggleTheme}>Изменить тему</button>
-			<Link to={'/'}>Главная</Link>
-			<Link to={'/about'}>О сайте</Link>
-			<Suspense fallback={<div>Загрузка...</div>}>
-				<Routes>
-					<Route path={'/about'} element={<AboutPage/>}/>
-					<Route path={'/'} element={<MainPage/>}/>
-				</Routes>
-			</Suspense>
+			<Navbar/>
+			<AppRouter/>
 		</div>
-	)
-}
+	);
+};
 
 export default App;
