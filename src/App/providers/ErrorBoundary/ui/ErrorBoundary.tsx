@@ -1,4 +1,4 @@
-import React, { Component, ErrorInfo, ReactNode } from "react";
+import React, { Component, ErrorInfo, ReactNode, Suspense } from "react";
 import { PageError } from "widgets/PageError/ui/PageError";
 
 interface Props {
@@ -27,7 +27,11 @@ class ErrorBoundary extends Component<Props, State> {
 		const {hasError} = this.state;
 		const {children} = this.props;
 		if (hasError) {
-			return <PageError/>;
+			return (
+				<Suspense fallback="">
+					<PageError />
+				</Suspense>
+			);
 		}
 
 		return this.props.children;

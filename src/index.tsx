@@ -5,6 +5,8 @@ import { ThemeProvider } from "App/providers/ThemeProvider";
 import App from "./App/App";
 import { ErrorBoundary } from "App/providers/ErrorBoundary";
 
+import "features/config/i18n/i18n";
+
 render(
 	<BrowserRouter>
 		<ErrorBoundary>

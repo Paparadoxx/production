@@ -2,7 +2,7 @@
   "compilerOptions": {
     "outDir": "./dist/",
     "noImplicitAny": true,
-		//подсвечивает все места, где не указан тип
+    //подсвечивает все места, где не указан тип
     "module": "ESNext",
     "target": "es5",
     "jsx": "react-jsx",
@@ -10,20 +10,26 @@
     "moduleResolution": "node",
     "baseUrl": ".",
     "paths": {
-      "*":["./src/*"]
+      "*": [
+        "./src/*"
+      ]
     },
-		"esModuleInterop": true,
-		//esModuleInterop позволяет работать с пакетами, которые используют 
-		//common js как с обычными пакетами с пом. import (require() mdule.export =common js)
-		"allowSyntheticDefaultImports": true
-		//если библиотека не имеет default export
-		//лоадеры(ts-loader, babel-loader) фвтоматически создают их 
-		//вместо такого импорта
-		//import * as React from'react' -> import React from 'react'
+    "esModuleInterop": true,
+    //esModuleInterop позволяет работать с пакетами, которые используют 
+    //common js как с обычными пакетами с пом. import (require() mdule.export =common js)
+    "allowSyntheticDefaultImports": true
+    //если библиотека не имеет default export
+    //лоадеры(ts-loader, babel-loader) автоматически создают их 
+    //вместо такого импорта
+    //import * as React from'react' -> import React from 'react'
   },
-	"ts-node": {
+  "ts-node": {
     "compilerOptions": {
       "module": "CommonJS"
     }
-  }
+  },
+  "include": [
+    "./config/jest/jest-setup.ts",
+    "src"
+  ],
 }
