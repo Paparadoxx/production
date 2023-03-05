@@ -18,7 +18,7 @@ export function buildPlugins({paths, isDev}: BuildOptions): webpack.WebpackPlugi
 			__IS_DEV__: JSON.stringify(isDev),
 		}),
 		new BundleAnalyzerPlugin({
-			analyzerMode: process.env.analyze ? "server" : "disabled",
+			analyzerMode: isDev ? "server" : "disabled",
 		})
 	];
 }

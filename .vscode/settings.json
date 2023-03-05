@@ -7,5 +7,5 @@
 		"css",
 		"scss"
 	],
-	"files.eol": "\n",
+	"files.eol": "auto",
 }
