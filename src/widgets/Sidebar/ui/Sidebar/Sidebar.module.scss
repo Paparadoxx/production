@@ -1,3 +1,4 @@
+/* stylelint-disable selector-class-pattern */
 .sidebar {
   height: calc(100vh - var(--navbar-height));
   width: var(--sidebar-width);
@@ -6,18 +7,50 @@
   transition: width 0.4s;
 }
 
-.collapsed {
-  width: var(--sidebar-width-collapsed);
-}
-
 .switchers {
   position: absolute;
   bottom: 20px;
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
 }
 
-.lang {
-  margin-left: 20px;
+.collapseBtn {
+  position: absolute;
+  right: -32px;
+  bottom: 32px;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-left: 30px;
+}
+
+.item {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.link {
+  margin-left: 10px;
+  opacity: 1;
+}
+
+.icon {
+  fill: var(--inverted-primary-color);
+  margin-right: 10px;
+}
+
+.collapsed {
+  width: var(--sidebar-width-collapsed);
+
+  .link {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }  
 }
