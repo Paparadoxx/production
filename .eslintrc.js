@@ -20,7 +20,8 @@ module.exports = {
 	"plugins": [
 		"react",
 		"@typescript-eslint",
-		"i18next"
+		"i18next",
+		"react-hooks"
 	],
 	"rules": {
 		"indent": [
@@ -41,6 +42,8 @@ module.exports = {
 		],
 		"i18next/no-literal-string": "error",
 		"no-unused-vars": "off",
-		"@typescript-eslint/no-unused-vars": "warn"
+		"@typescript-eslint/no-unused-vars": "warn",
+		"react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
+		"react-hooks/exhaustive-deps": "warn" // Checks effect dependencies
 	}
 };
