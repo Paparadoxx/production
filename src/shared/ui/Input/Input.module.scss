@@ -1,0 +1,23 @@
+.input-wrapper {
+    display: flex;
+    
+}
+
+.input {
+    background: transparent;
+    border: solid 0.5px var(--primary-color);;
+    border-radius: 5px;
+    width: 100%;
+    color: transparent;
+    text-shadow: 0 0 0 var(--primary-color);
+    padding: 10px;
+
+    &:focus {
+        outline: solid 2px var(--secondary-color);
+    }
+}
+
+.label {
+    margin-right: 10px;
+}
+

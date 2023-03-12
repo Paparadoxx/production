@@ -1,5 +1,5 @@
 /* eslint-disable linebreak-style */
-import { Configuration, RuleSetRule } from "webpack";
+import { Configuration, DefinePlugin, RuleSetRule } from "webpack";
 import path from "path";
 import { buildCssLoader } from "../build/loaders/buildCssLoader";
 
@@ -47,10 +47,10 @@ export default {
 		}),
 		config.module?.rules?.push(buildCssLoader(true));
 
-		// config!.plugins!.push(new DefinePlugin({
-		// 		__IS_DEV__: JSON.stringify(true),
-		// }));
-		// Return the altered config
+		config?.plugins?.push(new DefinePlugin({
+			__IS_DEV__: JSON.stringify(true),
+		}));
+		
 		return config;
 	},
 };
