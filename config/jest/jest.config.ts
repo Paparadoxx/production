@@ -28,6 +28,9 @@ export default {
 	moduleDirectories: [
 		"node_modules", "src"
 	],
+	modulePaths: [
+		"<rootDir>src",
+	],
 	// The root directory that Jest should scan for tests and modules within
 	rootDir: "../../",
 
@@ -42,6 +45,7 @@ export default {
 	moduleNameMapper: {
 		"\\.s?css$": "identity-obj-proxy",
 		"\\.svg": path.resolve(__dirname, "jestEmptyComponent.tsx"),
+		axios: "<rootDir>/node_modules/axios/dist/node/axios.cjs",
 	},
 
 	// A set of global variables that need to be available in all test environments
