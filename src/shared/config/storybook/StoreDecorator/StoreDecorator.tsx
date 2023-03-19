@@ -1,6 +1,6 @@
 /* eslint-disable react/display-name */
 import { Story } from "@storybook/react";
-import { StateSchema, StoreProvider } from "sApp/providers/StoreProvider";
+import { StateSchema, StoreProvider } from "App/providers/StoreProvider";
 import { DeepPartial, ReducersMapObject } from "@reduxjs/toolkit";
 import { loginReducer } from "features/AuthByUsername/model/slice/loginSlice";
 

@@ -1,4 +1,4 @@
-import { StateSchema } from "sApp/providers/StoreProvider";
+import { StateSchema } from "App/providers/StoreProvider";
 import { AsyncThunkAction } from "@reduxjs/toolkit";
 
 type ActionCreatorType<Return, Arg, RejectedValue>
