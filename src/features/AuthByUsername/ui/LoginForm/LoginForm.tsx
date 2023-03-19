@@ -14,22 +14,22 @@ import { loginActions, loginReducer } from "../../model/slice/loginSlice";
 import { memo, useCallback } from "react";
 
 import { loginByUsername } from "../../model/services/LoginByUsername/loginByUsername";
-import { DynamicModuleLoader, ReducerList } from "shared/lib/components/DynamicModuleLoader/DynamicModuleLoader";
+import { DynamicModuleLoader, ReducersList } from "shared/lib/components/DynamicModuleLoader/DynamicModuleLoader";
 import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
 
 export interface LoginFormProps {
-    className?: string;
-		onSuccess: () => void;
+	className?: string;
+	onSuccess: () => void;
 }
 
-const initialReducers: ReducerList = {
+const initialReducers: ReducersList = {
 	loginForm: loginReducer,
 };
 
 const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
 	const { t } = useTranslation();
 	const dispatch = useAppDispatch();
-	
+
 
 	const username = useSelector(getLoginUsername);
 	const password = useSelector(getLoginPassword);
@@ -38,15 +38,15 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
 
 	const onChangeUsername = useCallback((event) => {
 		dispatch(loginActions.setUsername(event.target.value));
-	},[dispatch]);
+	}, [dispatch]);
 
 	const onChangePassword = useCallback((event) => {
 		dispatch(loginActions.setPassword(event.target.value));
-	},[dispatch]);
+	}, [dispatch]);
 
-	const onLoginClick = useCallback (async() => {
-		const result = await dispatch(loginByUsername({username, password}));
-		if (result.meta.requestStatus === "fulfilled"){
+	const onLoginClick = useCallback(async () => {
+		const result = await dispatch(loginByUsername({ username, password }));
+		if (result.meta.requestStatus === "fulfilled") {
 			onSuccess();
 		}
 	}, [onSuccess, dispatch, username, password]);
@@ -71,7 +71,7 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
 					type="text"
 					className={cls.input}
 					placeholder="Введите пароль"
-					onChange={onChangePassword}	
+					onChange={onChangePassword}
 					value={password}
 				/>
 				<Button
@@ -84,7 +84,7 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
 				</Button>
 			</div>
 		</DynamicModuleLoader>
-		
+
 	);
 });
 

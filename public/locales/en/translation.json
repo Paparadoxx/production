@@ -11,5 +11,6 @@
   "Войти": "Login",
   "Выйти": "Logout",
   "Форма авторизации": "Auth form",
-  "Ошибка авторизации": "Wrong username or password"
+  "Ошибка авторизации": "Wrong username or password",
+  "PROFILE PAGE": "PROFILE PAGE"
 }

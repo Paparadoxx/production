@@ -3,14 +3,14 @@ import { ReduxStoreWithManager, StateSchemaKey } from "App/providers/StoreProvid
 import { FC, useEffect } from "react";
 import { useStore } from "react-redux";
 
-export type ReducerList = {
+export type ReducersList = {
 	[reducerKey in StateSchemaKey]?: Reducer; 
 }
 
 type ReducersListEntry = [StateSchemaKey, Reducer];
 
 interface DynamicModuleLoaderProps {
-	reducers: ReducerList;
+	reducers: ReducersList;
 	removeAfterUnmount?: boolean;
 }
 
