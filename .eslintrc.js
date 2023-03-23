@@ -45,5 +45,9 @@ module.exports = {
 		"@typescript-eslint/no-unused-vars": "warn",
 		"react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
 		"react-hooks/exhaustive-deps": "warn" // Checks effect dependencies
+	},
+	globals: {
+		__IS_DEV__: true,
+		__API__: true
 	}
 };

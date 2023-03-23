@@ -45,12 +45,14 @@ export default {
 	moduleNameMapper: {
 		"\\.s?css$": "identity-obj-proxy",
 		"\\.svg": path.resolve(__dirname, "jestEmptyComponent.tsx"),
-		axios: "<rootDir>/node_modules/axios/dist/node/axios.cjs",
+		axios: "<rootDir>/node_modules/axios/dist/axios.js",
 	},
 
 	// A set of global variables that need to be available in all test environments
 	globals: {
-		"__IS_DEV__": true
+		"__IS_DEV__": true,
+		
+		"__API__": "",
 	},
 
 	// All imported modules in your tests should be mocked automatically

@@ -5,7 +5,6 @@ import i18nForTests from "features/config/i18n/i18nForTests";
 import { MemoryRouter } from "react-router-dom";
 import { StoreProvider } from "App/providers/StoreProvider";
 import { StateSchema } from "App/providers/StoreProvider/config/StateSchema";
-import { DeepPartial } from "@reduxjs/toolkit";
 
 export interface componentRenderOptions {
 	route?: string;

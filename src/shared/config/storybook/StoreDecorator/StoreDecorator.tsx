@@ -1,10 +1,11 @@
 /* eslint-disable react/display-name */
 import { Story } from "@storybook/react";
 import { StateSchema, StoreProvider } from "App/providers/StoreProvider";
-import { DeepPartial, ReducersMapObject } from "@reduxjs/toolkit";
+import {  ReducersMapObject } from "@reduxjs/toolkit";
 import { loginReducer } from "features/AuthByUsername/model/slice/loginSlice";
+import { ReducersList } from "shared/lib/components/DynamicModuleLoader/DynamicModuleLoader";
 
-const defaultAsyncReducers: DeepPartial<ReducersMapObject<StateSchema>> = {
+const defaultAsyncReducers: ReducersList = {
 	loginForm: loginReducer,
 };
 

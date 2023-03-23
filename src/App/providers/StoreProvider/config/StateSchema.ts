@@ -2,6 +2,7 @@ import { AnyAction, CombinedState, EnhancedStore, Reducer, ReducersMapObject } f
 import { UserSchema } from "entities/User/model/types/user";
 import { LoginSchema } from "features/AuthByUsername";
 import { ProfileSchema } from "entities/Profile";
+import { AxiosInstance } from "axios";
 
 export interface StateSchema {
   user: UserSchema;
@@ -22,4 +23,13 @@ export interface IReducerManager {
 
 export interface ReduxStoreWithManager extends EnhancedStore<StateSchema> {
 	reducerManager: IReducerManager;
+}
+
+export interface ThunkExtraArg {
+  api: AxiosInstance;
+}
+
+export interface ThunkConfig<T> {
+  rejectValue: T;
+  extra: ThunkExtraArg
 }
