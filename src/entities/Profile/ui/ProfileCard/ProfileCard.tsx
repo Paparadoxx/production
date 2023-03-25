@@ -1,6 +1,6 @@
 import { getProfileData } from "../../model/selectors/getProfileData/getProfileData";
 import { useSelector } from "react-redux";
-import { classNames } from "shared/liba/classNames/classNames";
+import { classNames } from "shared/lib/classNames/classNames";
 import cls from "./ProfileCard.module.scss";
 import { getProfileIsLoading } from "../../model/selectors/getProfileIsLoading/getProfileIsloading";
 import { getProfileError } from "../../model/selectors/getProfileError/getProfileError";
