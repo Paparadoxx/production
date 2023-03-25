@@ -4,8 +4,8 @@ import { loginByUsername } from "../services/LoginByUsername/loginByUsername";
 
 const initialState: LoginSchema = {
 	isLoading: false,
-	username:"",
-	password:"",
+	username: "",
+	password: "",
 };
 
 export const loginSlice = createSlice({
@@ -30,7 +30,7 @@ export const loginSlice = createSlice({
 			})
 			.addCase(loginByUsername.rejected, (state, action) => {
 				state.isLoading = false;
-				state.error = action.payload.toString();
+				state.error = action?.payload?.toString();
 			});
 	},
 });
