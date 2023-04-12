@@ -2,6 +2,7 @@
   "Главная": "Main",
   "Главная страница": "Main page",
   "О сайте": "About",
+  "Профиль": "Profile",
   "Обновить страницу": "Reload page",
   "Перевод": "Translate",
   "Произошла непредвиденная ошибка": "Somethong went wrong",
@@ -12,5 +13,6 @@
   "Выйти": "Logout",
   "Форма авторизации": "Auth form",
   "Ошибка авторизации": "Wrong username or password",
-  "PROFILE PAGE": "PROFILE PAGE"
+  "PROFILE PAGE": "PROFILE PAGE",
+  "Укажите страну": "Enter your country"
 }

@@ -26,10 +26,10 @@
     }
   ],
   "profile": {
+    "id": "1",
     "first": "Александр",
-    "lastname": "Петров",
-    "age": 32,
-    "currency": "RUB",
+    "lastname": "Соколов",
+    "age": 22,
     "country": "Russia",
     "city": "Moscow",
     "username": "admin",
